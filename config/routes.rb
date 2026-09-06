@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   Rails.application.routes.draw do
     post "order_events", to: "order_events#create"
   end
+
+  resources :subscriptions, only: [:index, :create, :update]
 end
+
